@@ -1,0 +1,22 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "BOOK-STORE-API-2",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "BOOK-STORE-API-2",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "username": "root",
+    "password": null,
+    "database": "BOOK-STORE-API-2",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+
