@@ -12,17 +12,27 @@ const findAllBooks = async (req, res) => {
 }
 
 const detailBook = async (req, res) => {
-    //get id dari request
-    let id = parseInt(req.body.id);
-
-    // AMBIL DATA DARI DATABASE
-    const data = await Book.findByPk(id);
-
-    // tampilkan
-    res.json({
-        message: "ini dari router",
-        data: data,
+  try {
+    const response = await Book.findOne({
+      where: {
+        id: req.params.id,
+      },
     });
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(error.message);
+  }
+    // //get id dari request
+    // let id = parseInt(req.body.id);
+
+    // // AMBIL DATA DARI DATABASE
+    // const data = await Book.findByPk(id);
+
+    // // tampilkan
+    // res.json({
+    //     message: "ini dari router",
+    //     data: data,
+    // });
 }
 
 const tambahBuku = async (req, res) => {
@@ -82,7 +92,7 @@ const updateBuku = async (req, res) => {
 
     // tampilkan status
     res.json({
-      message: "berhasil update boy",
+      message: "berhasil update Mantap!!!",
       data: newData,
     });
   } catch (error) {

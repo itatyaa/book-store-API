@@ -1,8 +1,10 @@
 const express = require('express');
 // const mysql = require("mysql");
 
-const app = express()
-const port = 5656
+const app = express();
+const port = 5656;
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 
 const router = require("./routes/index");
